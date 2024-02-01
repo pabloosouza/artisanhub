@@ -9,7 +9,7 @@ public class Supplier(Guid id, string name, string registryNumber, string contac
     public string Name { get; private set; } = name;
     public string RegistryNumber { get; private set; } = registryNumber;
     public string Contact { get; private set; } = contact;
-    public Guid AccountId { get; private set; }
-    public Account? Account { get; private set; }
+    public Guid UserId { get; private set; }
+    public User? User { get; private set; }
     public IReadOnlyCollection<Product> Products => _products;
 }

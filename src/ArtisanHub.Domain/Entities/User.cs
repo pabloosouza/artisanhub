@@ -3,7 +3,7 @@ using ArtisanHub.Domain.Enums;
 
 namespace ArtisanHub.Domain.Entities;
 
-public class Account(Guid id, string username, string email, string passwordHash, Role role) : Entity(id)
+public class User(Guid id, string username, string email, string passwordHash, Role role) : Entity(id)
 {
     private readonly List<Supplier> _suppliers = [];
 
