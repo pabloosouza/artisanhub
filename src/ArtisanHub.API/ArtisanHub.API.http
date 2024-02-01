@@ -1,0 +1,6 @@
+@ArtisanHub.API_HostAddress = http://localhost:5071
+
+GET {{ArtisanHub.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
