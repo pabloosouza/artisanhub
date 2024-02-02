@@ -1,5 +1,6 @@
 using ArtisanHub.Application;
 using ArtisanHub.Infrastructure;
+using ArtisanHub.Presentation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructure(builder.Configuration)
-    .AddApplication();
+    .AddApplication()
+    .AddPresentation();
 
 var app = builder.Build();
 
