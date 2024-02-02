@@ -1,7 +1,7 @@
 namespace ArtisanHub.Domain.Shared;
 
-public class Error
+public class Error(string code, string message)
 {
-    public string Code { get; private set; }
-    public string Message { get; private set; }
+    public string Code { get; private set; } = code;
+    public string Message { get; private set; } = message;
 }

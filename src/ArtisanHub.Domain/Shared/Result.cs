@@ -14,7 +14,7 @@ public class Result
     
     public bool Success { get; init; }
     public bool IsFailure => !Success;
-    public List<Error> Errors { get; init; }
+    public List<Error> Errors { get; init; } = [];
 
     public static Result Ok() => new();
     
