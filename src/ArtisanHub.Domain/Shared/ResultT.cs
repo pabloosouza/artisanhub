@@ -9,12 +9,12 @@ public class Result<TValue> : Result
         Data = data;
     }
 
-    private Result(List<Error> errors)
-        : base(errors)
+    private Result(Error error)
+        : base(error)
     {
     }
 
     public static Result<TValue> Ok(TValue data) => new(data);
 
-    public new static Result<TValue> Failure(List<Error> errors) => new(errors);
+    public new static Result<TValue> Failure(Error error) => new(error);
 }

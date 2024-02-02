@@ -7,16 +7,16 @@ public class Result
         Success = true;
     }
 
-    protected Result(List<Error> errors)
+    protected Result(Error error)
     {
-        Errors = errors;
+        Error = error;
     }
     
     public bool Success { get; init; }
     public bool IsFailure => !Success;
-    public List<Error> Errors { get; init; } = [];
+    public Error Error { get; init; } 
 
     public static Result Ok() => new();
     
-    public static Result Failure(List<Error> errors) => new(errors);
+    public static Result Failure(Error error) => new(error);
 }

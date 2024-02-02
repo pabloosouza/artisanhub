@@ -10,7 +10,7 @@ public class ApiController(ISender sender) : ControllerBase
     protected IActionResult Test(Result result)
     {
         if (result.IsFailure)
-            return BadRequest(result.Errors);
+            return BadRequest(result.Error);
 
         return Ok(result);
     }
